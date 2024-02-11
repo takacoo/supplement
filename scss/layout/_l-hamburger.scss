@@ -1,0 +1,133 @@
+/////////////////////////////
+// ハンバーガーメニューのスタイル
+//////////////////////////// 
+
+.nav__h {
+    background-color: $c-t-blk;
+    position: fixed;
+    top: 0;
+    right: -100%;
+	height: 100lvh;
+    z-index: 9999;
+    width: 0;
+    transition: 3.0s;
+    display: flex;
+    align-items: center;
+}
+
+.nav__h.active {
+    width: 410px;
+    transition: 1.0s;
+    right: 0;
+    @include sp {
+        width: 280px;
+        transition: 1.5s;
+    }
+}
+
+.nav__h.active .nav__h-inner {
+    display: block;
+}
+
+.btn-open {
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    cursor: pointer;
+        width: 30px;
+        height: 30px;
+    border-radius: 2px;
+    position: fixed;
+    top: 15px;
+    right: -3px;
+    z-index: 9999;
+    @include sp {
+        top: 10px;
+        right: -6px;
+    }
+    span {
+        display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    right: 14px;
+    height: 1px;
+    border-radius: 2px;
+    background: $c-t-blk;
+    width: 100%;
+    &:nth-of-type(1) {
+        top:15px; 
+        }
+    &:nth-of-type(2) {
+        top:23px; 
+        }
+    &:nth-of-type(3) {
+        top:31px;
+        }
+    }
+}
+
+.btn-open-area {
+    transition: all .6s;/*アニメーションの設定*/
+    width: 30px;
+    height: 30px;
+}
+
+.btn-open.active {
+    top: 10px;
+}
+
+.btn-open.active span:nth-of-type(1) {
+    top: 18px;
+    right: 16px;
+    transform: translateY(12px) rotate(-45deg);
+    background-color: $c-white;
+}
+
+.btn-open.active span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.btn-open.active span:nth-of-type(3) {
+    top: 31px;
+    right: 16px;
+    transform: translateY(0) rotate(45deg);
+    background-color: $c-white;
+}
+
+.nav-bottom {
+    text-align: center;
+    a {
+        font-family: $f-j;
+    }
+}
+
+.n-b-title {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $c-t-blk;
+    margin: 0 auto 20px;
+    padding-bottom: 15px;
+    font-size: 2.6rem;
+    @include sp {
+        font-size: 2.2rem;
+    }
+}
+
+.n-b-tel {
+    font-size: 1.8rem;
+    font-weight: bold;
+    @include sp {
+        font-size: 1.6rem !important;
+    }
+}
+
+.wrap__icon {
+    gap: 20px;
+    @include sp {
+        gap: 10px;
+    }
+}
+
+.qr-name {
+    font-size: 1.4rem;
+    padding-bottom: 10px;
+    text-align: center;
+}

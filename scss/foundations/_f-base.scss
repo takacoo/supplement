@@ -1,0 +1,82 @@
+/////////////////////////////
+// メディアクエリやremの指定
+//////////////////////////// 
+
+/* メディアクエリ */
+$pc: 780px;
+$sp: 780px;
+
+@mixin pc {
+    @media screen and (min-width: ($pc)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
+/* 切り替えスイッチ */
+.pc {
+    display: block;
+    &__i {
+        display: inline;
+    }
+    @include sp {
+        display: none;
+        &__i {
+            display: none;
+        }
+    }
+}
+.sp {
+    display: none;
+    &__i {
+        display: none;
+    }
+    @include sp {
+        display: block;
+        &__i {
+            display: inline;
+        }
+    }
+}
+
+/* 全体の設定 */
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 62.5%; /* 16px * 62.5% = 10px */
+    width: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    color: $c-t-blk;
+    font-family: $f-j;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: left;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+    color: $c-t-blk;
+}
+a:hover {
+    opacity: 0.5;
+}
+* {
+    box-sizing: border-box;
+    &:focus-visible {
+        outline-offset: 0px;
+        outline: none;
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+}
