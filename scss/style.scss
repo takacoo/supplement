@@ -5,18 +5,16 @@
 @import "foundations/_f-mixin";
 
 /* layout */
-@import "layout/_l-breadcrumb";
-@import "layout/_l-footer";
-@import "layout/_l-hamburger";
 @import "layout/_l-header";
+@import "layout/_l-nav";
+@import "layout/_l-main";
+@import "layout/_l-rank";
+@import "layout/_l-footer";
 
 /* object */
 //component
 @import "object/component/_c-btn";
 @import "object/component/_c-heading";
-
-//project
-@import "object/project/_p-top";
 
 //utility
 @import "object/utility/_u-utility";

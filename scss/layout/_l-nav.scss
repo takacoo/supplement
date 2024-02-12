@@ -1,0 +1,36 @@
+/////////////////////////////
+// ナビのスタイル
+//////////////////////////// 
+
+.nav__item {
+    ul {
+        margin-bottom: 60px;
+        padding: 6px 6px 6px 10px;
+        font-size: 1.4rem;
+        li {
+            padding: 12px 6px 14px 14px;
+            border-bottom: 1px $c-t-blk dashed;
+            position: relative;
+            &:before {
+                content: '';
+                width: 2px;
+                height: 20px;
+                padding: 2px;
+                background-color: $c-main;
+                position: absolute;
+                top: 12px;
+                left: 0;
+            }
+            a {
+                &:hover {
+                    color: $c-main;
+                }
+            }
+        }
+    }
+    @include sp {
+        ul {
+            margin-bottom: 30px;
+        }
+    }
+}

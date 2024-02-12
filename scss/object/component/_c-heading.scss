@@ -3,19 +3,202 @@
 ////////////////////////////
 
 .h1 {
-    font-size: 6.0rem;
+    &__ranking {
+        display: block;
+        font-weight: bold;
+        background-color: $c-main;
+        padding: 30px 0px 40px 20px;
+        position: relative;
+        font-family: $f-h;
+        font-size: 2rem;
+        letter-spacing: .1em;
+        color: $c-white;
+        text-align: center;
+        &:before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: -12px;
+            width: 210px;
+            height: 80px;
+            background-image: url(../img/h1-item.png);
+            background-size: cover;
+        }
+        &:after {
+            content: '';
+            background-color: $c-white;
+            border: 3px solid $c-main;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: rotate(-1deg);
+        }
+        span {
+            &:nth-of-type(1) {
+                display: inline-block;
+                position: relative;
+                height: 50px;/*リボンの高さ*/
+                line-height: 50px;/*リボンの高さ*/
+                text-align: center;
+                padding: 0 60px;/*横の大きさ*/
+                font-size: 1.8rem;/*文字の大きさ*/
+                background: $c-white;/*塗りつぶし色*/
+                color: $c-sub;/*文字色*/
+                box-sizing: border-box;
+                &:before, &:after {
+                    position: absolute;
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    z-index: 1;
+                }
+                &:before {
+                    top: 0;
+                    left: 0;
+                    border-width: 25px 0px 25px 15px;
+                    border-color: transparent transparent transparent $c-main;
+                    border-style: solid;
+                }
+                &:after {
+                    top: 0;
+                    right: 0;
+                    border-width: 25px 15px 25px 0px;
+                    border-color: transparent $c-main transparent transparent;
+                    border-style: solid;
+                }
+            }
+            &:nth-of-type(2) {
+                display: block !important;
+                font-size: 2.8rem;
+                padding-top: 20px;
+            }
+        }
+        @include sp {
+            padding: 20px 0 30px 20px;
+            font-size: 1.6rem;
+            width: 98%;
+            &:before {
+                left: 0;
+                width: 130px;
+                height: 50px;
+            }
+            span {
+                &:nth-of-type(1) {
+                    padding: 0 40px;
+                    font-size: 1.6rem;
+                }
+                &:nth-of-type(2) {
+                    font-size: 2.4rem;
+                    line-height: 1.6;
+                }
+            }
+        }
+    }
 }
 
 .h2 {
-    font-size: 5.0rem;
+    &__01 {
+        font-weight: bold;
+        border: 3px solid $c-main;
+        background-color: $c-white;
+        padding: 16px 0px 20px 20px;
+        position: relative;
+        font-family: $f-h;
+        font-size: 2rem;
+        letter-spacing: .1em;
+        &:after {
+            content: '';
+            background-color: $c-main;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transform: rotate(-1deg);
+        }
+        span {
+            font-weight: 700;
+            background:linear-gradient(transparent 60%, $c-border 60%);
+            font-size: 2.6rem;
+        }
+        @include sp {
+            font-size: 1.6rem;
+            text-align: center;
+            padding-left: 0;
+            &:after {
+            transform: rotate(-3deg);
+            }
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 .h3 {
-    font-size: 4.0rem;
+    font-size: 1.8rem;
+    font-family: $f-h;
+    letter-spacing: .08em;
+    position: relative;
+    display: block;
+    border-bottom: 2px solid $c-sub;
+    padding: 0 0 8px 46px;
+    span {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: $c-main;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -15px;
+        // padding: 20px;
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/point-1.png);
+        background-size: cover;
+    }
+    &__2 {
+        &:before {
+        background-image: url(../img/point-2.png);
+        }
+    }
+    &__3 {
+        &:before {
+        background-image: url(../img/point-3.png);
+        }
+    }
+    @include sp {
+        font-size: 1.4rem;
+        padding-left: 30px;
+        span {
+            font-size: 1.6rem;
+        }
+        &:before {
+            width: 30px;
+            height: 30px;
+            top: -2px;
+            left: -6px;
+        }
+    }
 }
 
 .h4 {
-    font-size: 3.0rem;
+    font-size: 2rem;
+    color: $c-white;
+    background-image: url(../img/nav__item-bg.png);
+    background-size: cover;
+    width: 100%;
+    font-family: $f-h;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 500;
+    letter-spacing: .1em;
 }
 
 .h5 {
@@ -24,4 +207,10 @@
 
 .h6 {
     font-size: 1.0rem;
+}
+
+.h-br {
+    @include sp {
+        display: block;
+    }
 }

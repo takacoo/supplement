@@ -2,3 +2,43 @@
 // フッターのスタイル
 //////////////////////////// 
 
+.footer {
+    width: 100%;
+    background-image: url(../img/footer-bg.png);
+    background-position: top;
+    background-size: cover;
+    color: $c-white;
+    padding: 30px 30px 10px 30px;
+    text-align: center;
+    small {
+        font-size: 1rem;
+    }
+}
+
+.nav__f {
+    margin-bottom: 20px;
+    ul {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        li {
+            a {
+                color: $c-white;
+                font-weight: 700;
+                &:hover {
+                    color: $c-main;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @include sp {
+        ul {
+            display: block;
+            text-align: left;
+            li {
+                padding-bottom: 16px;
+            }
+        }
+    }
+}

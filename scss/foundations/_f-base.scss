@@ -3,8 +3,8 @@
 //////////////////////////// 
 
 /* メディアクエリ */
-$pc: 780px;
-$sp: 780px;
+$pc: 840px;
+$sp: 840px;
 
 @mixin pc {
     @media screen and (min-width: ($pc)) {
@@ -57,10 +57,13 @@ html {
 body {
     color: $c-t-blk;
     font-family: $f-j;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 2.4rem;
     text-align: left;
-    font-weight: 300;
+    font-weight: 400;
+    @include sp {
+        font-size: 1.2rem;
+    }
 }
 a {
     text-decoration: none;
@@ -79,4 +82,5 @@ a:hover {
 img {
     width: 100%;
     height: auto;
+    object-fit: cover;
 }

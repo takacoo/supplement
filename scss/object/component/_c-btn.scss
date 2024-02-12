@@ -2,95 +2,20 @@
 // ボタンスタイルの指定
 ////////////////////////////
 
-
-
-/***************** UPボタン *****************/
-/* リンクの形状 */
-.fa-angle-up {
-    font-size: 2.0rem;
+.btn {
+    display: inline-block;
+    padding: 14px 36px 14px 30px;
+    background-color: $c-main;
     color: $c-white;
-}
-
-.fas {
-    margin-top: -12px;
-}
-
-/* リンクの形状 */
-#btn-up a {
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    background: $c-t-blk;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    color: $c-white;
-    text-align: center;
-    text-transform: uppercase; 
-    text-decoration: none;
-    transition:all 0.3s;
-    padding-bottom: 10px;
-    box-sizing: border-box;
+    font-weight: 700;
     position: relative;
-    // &::after {
-    //     content: 'top';
-    //     position: absolute;
-    //     padding-top: 20px;
-    //     font-size: 1.2rem;
-    // }
-}
-
-#btn-up a:hover{
-    opacity: 1;
-}
-
-/* リンクを右下に固定 */
-#btn-up {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 999;
-    /*はじめは非表示*/
-    opacity: 0;
-    transform: translateY(100px);
-    @include sp {
-        right: 5px;
-        bottom:10px;
+    border-radius: 6px;
+    width: 130px;
+    &:after {
+        content: '\f054';
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        position: absolute;
+        right: 15px;
     }
 }
-
-/*　上に上がる動き　*/
-#btn-up.UpMove{
-    animation: UpAnime 0.5s forwards;
-}
-@keyframes UpAnime{
-    from {
-    opacity: 0;
-    transform: translateY(100px);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(0);
-    }
-}
-
-/*　下に下がる動き　*/
-#btn-up.DownMove{
-    animation: DownAnime 0.5s forwards;
-}
-@keyframes DownAnime{
-    from {
-    opacity: 1;
-    transform: translateY(0);
-    }
-    to {
-    opacity: 1;
-    transform: translateY(150px);
-    }
-}
-
-/** ヘッダーかフッターへ記述 **
-<p id="btn-up"><a href="#top"><i class="fas fa-angle-up"></i></a></p>
-**/
-
-/***************** UPボタン ここまで *****************/

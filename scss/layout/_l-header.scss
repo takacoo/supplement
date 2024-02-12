@@ -2,3 +2,16 @@
 // ヘッダーのスタイル
 //////////////////////////// 
 
+.header {
+    // width: 100%;
+    // margin: 10px auto 20px;
+    margin: 10px 100px 20px;
+    @include sp {
+        margin: 10px 20px 0;
+    }
+    figure {
+        img {
+            object-fit: contain;
+        }
+    }
+}

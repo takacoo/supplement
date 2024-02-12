@@ -1,0 +1,21 @@
+/////////////////////////////
+// アイテム紹介のスタイル
+//////////////////////////// 
+
+.section__rank {
+    width: 100%;
+}
+
+.rank {
+    margin: 0 auto 100px;
+    background-color: rgba($color: $c-main, $alpha: .1);
+    border-radius: 10px;
+}
+
+.rank__title {
+    font-family: $f-h;
+    text-align: center;
+    p {
+        font-weight: 700;
+    }
+}
