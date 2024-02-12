@@ -137,6 +137,22 @@
             }
         }
     }
+    &__rank {
+        display: block;
+        height: 100px;
+        font-size: 4rem;
+        color: $c-white;
+        font-weight: 700;
+        background-color: $c-rank-title;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: .02em;
+        @include sp {
+            height: 80px;
+            font-size: 2.4rem;
+        }
+    }
 }
 
 .h3 {
@@ -184,6 +200,62 @@
             height: 30px;
             top: -2px;
             left: -6px;
+        }
+    }
+    &__rank {
+        font-size: 2.4rem;
+        color: $c-white;
+        display: block;
+        height: 100px;
+        position: relative;
+        background-color: $c-main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $f-h;
+        text-align: center;
+        line-height: 1.4;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 120px;
+            height: 143px;
+            background-image: url(../img/ready-2.png);
+            background-size: cover;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            width: 120px;
+            height: 143px;
+            background-image: url(../img/ready-1.png);
+            background-size: cover;
+        }
+        &-2 {
+            &:before {
+                background-image: url(../img/ready-4.png);
+            }
+            &:after {
+                background-image: url(../img/ready-3.png);
+            }
+        }
+        @include sp {
+            font-size: 1.8rem;
+            height: 70px;
+            line-height: 1.2;
+            &:before, &:after {
+                width: 60px;
+                height: 72px;
+                left: -12px;
+            }
+            &:after {
+                right: -12px;
+                left: auto;
+            }
         }
     }
 }

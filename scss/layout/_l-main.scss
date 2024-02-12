@@ -45,6 +45,7 @@ main {
     }
 }
 
+//概要説明
 .section__info {
     padding: 26px;
     background-color: rgba($color: $c-sub, $alpha: .1);
@@ -71,6 +72,7 @@ main {
     }
 }
 
+//ポイント
 .section__point {
     margin-bottom: 60px;
     p {
@@ -141,6 +143,7 @@ main {
     }
 }
 
+//ランキング
 .section__ranking {
     margin-bottom: 260px;
     @include sp {
@@ -152,9 +155,12 @@ main {
     white-space: nowrap;
     margin: 100px auto 0;
     text-align: center;
+    table-layout: fixed;
+    width: 100%;
     th, td {
         border: 1px solid $c-line;
         padding: 20px 6px;
+        width: calc((100% - 150px) / 4);
     }
     td {
         align-items: center;
@@ -184,6 +190,8 @@ main {
         &-wrap {
             overflow-x: scroll;
         }
+        table-layout: unset;
+
     }
 }
 
@@ -203,7 +211,7 @@ main {
     background-color: $c-table;
     font-weight: 700;
     font-size: 1.4rem !important;
-    width: 150px;
+    width: 150px !important;
     @include sp {
         font-size: 1.2rem !important;
     }
@@ -214,7 +222,7 @@ main {
     &:before {
         content: '';
         position: absolute;
-        top: -60px;
+        top: -64px;
         left: -40px;
         width: 115px;
         height: 83px;
